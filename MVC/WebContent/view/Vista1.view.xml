@@ -1,0 +1,9 @@
+<mvc:View  controllerName="controller.Vista1" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+            xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page>
+        <content>
+            <Button text="Hola Mundo" press="holaMundo"></Button>
+        </content>
+    </Page>
+</mvc:View>
+
