@@ -1,4 +1,4 @@
-<mvc:View  controllerName="controller.Vista1" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+<mvc:View  controllerName="sap.ui.demo.wt.controller.Vista1" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
            xmlns:html="http://www.w3.org/1999/xhtml">
     <Page>
         <content>
