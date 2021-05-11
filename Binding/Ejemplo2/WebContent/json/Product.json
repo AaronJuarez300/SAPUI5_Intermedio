@@ -1,0 +1,48 @@
+{
+  "Products":[
+    {
+      "ProductName": "Milk",
+      "Quantity": 4,
+      "ExtendedPrice": 9.99999,
+      "ShipperName": "ACME",
+      "ShippedDate": "2015-02-18T00:00:00",
+      "DiscontinuedDate": "2006-10-01T00:00:00",
+      "State": true,
+      "EmailContact": "Acme@example.com",
+      "Status": "B"
+    },
+    {
+      "ProductName": "Canned Beans",
+      "Quantity": 3,
+      "ExtendedPrice": 6.85000,
+      "ShipperName": "ACME",
+      "ShippedDate": "2015-03-02T00:00:00",
+      "DiscontinuedDate": "2006-10-01T00:00:00",
+      "EmailContact": "Acme@example.com",
+      "State": false,
+      "Status": "B"
+    },
+    {
+      "ProductName": "Salad",
+      "Quantity": 2,
+      "ExtendedPrice": 8.8000,
+      "ShipperName": "ACME",
+      "ShippedDate": "2015-04-12T00:00:00",
+      "DiscontinuedDate": "2006-10-01T00:00:00",
+      "EmailContact": "Acme@example.com",
+      "State": true,
+      "Status": "C"
+    },
+    {
+      "ProductName": "Bread",
+      "Quantity": 1,
+      "ExtendedPrice": 2.71212,
+      "ShipperName": "Fun Inc.",
+      "ShippedDate": "2015-01-27T00:00:00",
+      "DiscontinuedDate": "2006-10-01T00:00:00",
+      "EmailContact": "Acme@example.com",
+      "State": true,
+      "Status": "A"
+    }
+  ]
+}

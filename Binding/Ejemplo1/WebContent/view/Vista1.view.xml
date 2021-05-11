@@ -2,13 +2,34 @@
            xmlns:html="http://www.w3.org/1999/xhtml">
     <Page>
         <content>
-            <HBox>
-            <Input id="txtSaludo"></Input>
-            <Button text="Saludar" press="saludar"></Button>
-            </HBox>
-            <html:div class="container" style="margin-top: 3%">
-                <html:button onClick="alert('Hello World!');">"Este es un boton html"</html:button>
-            </html:div>
+            <VBox>
+                <HBox>
+                    <Label id="lblNombreProducto" text="Nombre Producto:"></Label>
+                    <Input id="txtNombreProducto" value="{productos>/0/ProductName}"></Input>
+                </HBox>
+                <HBox>
+                    <Label id="lblCantidad" text="Cantidad:"></Label>
+                    <Input id="txtCantidad" value="{productos>/0/Quantity}"></Input>
+                </HBox>
+                <HBox>
+                    <Label id="lblPrecio" text="Precio:"></Label>
+                    <Input id="txtPrecio" value="{productos>/0/ExtendedPrice}"></Input>
+                </HBox>
+                <HBox>
+                    <Label id="lblShipperName" text="Proveedor"></Label>
+                    <Input id="txtShipperName" value="{productos>/0/ShipperName}"></Input>
+                </HBox>
+                <HBox>
+                    <Label id="lblShippedDate" text="Fecha compra:"></Label>
+                    <Input id="txtShippedDate" value="{productos>/0/ShippedDate}"></Input>
+                </HBox>
+                <HBox>
+                    <Label id="lblStatus" text="Estado:"></Label>
+                    <Input id="txtStatus" value="{productos>/0/Status}"></Input>
+                </HBox>
+                <Button text="Ver Modelo" press="verModelo">
+                </Button>
+            </VBox>
         </content>
     </Page>
 </mvc:View>

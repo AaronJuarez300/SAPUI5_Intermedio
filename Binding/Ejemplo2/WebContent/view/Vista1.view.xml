@@ -1,0 +1,195 @@
+<mvc:View id="Init" xmlns="sap.m" xmlns:ly="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+          controllerName="sap.ui.demo.wt.controller.Vista1" xmlns:html="http://www.w3.org/1999/xhtml" >
+
+    <Page id="init" title="Lista de clientes">
+        <content>
+            <VBox>
+                <f:Form id="FormToolbar"
+                        editable="true"
+                        ariaLabelledBy="Title1">
+
+                    <f:layout>
+                        <f:ResponsiveGridLayout  />
+                    </f:layout>
+
+                    <f:formContainers>
+                        <f:FormContainer ariaLabelledBy="Title2">
+                            <f:toolbar>
+                                <Toolbar>
+                                    <Title id="Title2" text="Binding" level="H4"  titleStyle="H4"/>
+                                    <ToolbarSpacer />
+
+                                </Toolbar>
+                            </f:toolbar>
+                            <f:formElements>
+                                <f:FormElement label="State (Boolean)">
+                                    <f:fields>
+                                        <Input id= "txtState" value="{path: 'products>/Products/2/State',
+                                                                            type: 'sap.ui.model.type.Boolean'}" >
+                                        </Input>
+
+                                        <Text text="State"> </Text>
+                                        <Text text="{path: 'products>/Products/2/State', type: 'sap.ui.model.type.Boolean'}">
+                                        </Text>
+                                    </f:fields>
+                                </f:FormElement>
+
+                                <f:FormElement label="Date and Time">
+                                    <f:fields>
+                                        <DateTimePicker id= "txtQuantity3" value="{
+				                            path: 'products>/Products/2/ShippedDate',
+				                            type: 'sap.ui.model.type.DateTime',
+                                                    formatOptions: {
+                                                    source: {
+                                                    pattern: 'yyyy-MM-ddTHH:mm:ss'
+                                                    },
+                                                     pattern: 'yyyy-MM-ddTHH:mm:ss'
+                                                    }}" >
+                                        </DateTimePicker>
+                                    </f:fields>
+                                </f:FormElement>
+
+                                <f:FormElement label="Date Short">
+                                    <f:fields>
+
+                                        <Text text="{
+                                                    path: 'products>/Products/2/ShippedDate',
+                                                    type: 'sap.ui.model.type.Date',
+                                                    formatOptions: {
+                                                    source: {
+                                                    pattern: 'yyyy-MM-ddTHH:mm:ss'
+                                                    },
+                                                    style: 'short'
+                                                    }
+                                        }" />
+
+                                        <Text text="DateTime Pattern: "></Text>
+
+                                        <Text text="{
+                                                    path: 'products>/Products/2/ShippedDate',
+                                                    type: 'sap.ui.model.type.DateTime',
+                                                    formatOptions: {
+                                                    source: {
+                                                    pattern: 'yyyy-MM-ddTHH:mm:ss'
+                                                    },
+                                                    pattern: 'yyyyMMdd HHmmss'
+                                                    }
+                                        }" />
+
+                                    </f:fields>
+                                </f:FormElement>
+
+                                <f:FormElement label="ExtendedPrice">
+                                    <f:fields>
+                                        <Input id= "txtExtendedPrice" value="{path: 'products>/Products/2/ExtendedPrice',
+                                                                            type: 'sap.ui.model.type.Float'}" >
+                                        </Input>
+
+                                        <Text text="ExtendedPrice (Float)"> </Text>
+                                        <Text text="{path: 'products>/Products/2/ExtendedPrice', type: 'sap.ui.model.type.Float'}">
+                                        </Text>
+                                    </f:fields>
+                                </f:FormElement>
+
+                                <f:FormElement label="Min and Max (Integer, Constraints, Format Options)">
+                                    <f:fields>
+                                        <Input id= "txtQuantity2"  value="{path: 'products>/Products/2/Quantity', type: 'sap.ui.model.type.Integer'
+                                                                            ,constraints:{minimum:0, maximum:999},
+                                                                            formatOptions: {minIntegerDigits: 3}}" >
+                                        </Input>
+                                        <Text text="Quantity"> </Text>
+                                        <Text text="{path: 'products>/Products/2/Quantity', type: 'sap.ui.model.type.Integer'}">
+                                        </Text>
+                                    </f:fields>
+                                </f:FormElement>
+
+                                <f:FormElement label="ProductName (String)">
+                                    <f:fields>
+                                        <Input  value="{path: 'products>/Products/2/ProductName', type: 'sap.ui.model.type.String' ,constraints:{minLength :0, maxLength :3}}">
+                                        </Input>
+                                        <Text text="Product Name"> </Text>
+                                        <Text  text="{path: 'products>/Products/2/ProductName', type: 'sap.ui.model.type.String'}">
+                                        </Text>
+                                    </f:fields>
+                                </f:FormElement>
+
+                                <f:FormElement label="Custom Data Type">
+                                    <f:fields>
+
+                                        <Input id= "txtEmail" value="{path: 'products>/Products/2/EmailContact',
+                                                                    type: 'sap.ui.demo.wt.formatters.EmailType'}" >
+                                        </Input>
+
+                                        <Text text="Email"> </Text>
+                                        <Text text="{products>/Products/2/EmailContact}">
+                                        </Text>
+                                    </f:fields>
+                                </f:FormElement>
+
+                                <f:FormElement label="Formatters">
+                                    <f:fields>
+
+                                        <Text  text="{path: 'products>/Products/2/ProductName', type: 'sap.ui.model.type.String',formatter: '.toUpperCase'}">
+                                        </Text>
+                                    </f:fields>
+                                </f:FormElement>
+
+                                <f:FormElement label="Class formatter">
+                                    <f:fields>
+
+                                        <Text  text="{path: 'products>/Products/2/ProductName', type: 'sap.ui.model.type.String',formatter: '.formatter.toUpperCase'}">
+                                        </Text>
+                                    </f:fields>
+                                </f:FormElement>
+
+                                <f:FormElement label="Calculated Fields">
+                                    <f:fields>
+                                        <Text  text="{products>/Products/2/ProductName},{products>/Products/2/ShipperName}">
+                                        </Text>
+                                    </f:fields>
+                                </f:FormElement>
+
+                                <f:FormElement label="Expression Bindings">
+                                    <f:fields>
+                                        <Text  text="{path: 'products>/Products/2/ProductName', type: 'sap.ui.model.type.String'}">
+                                        </Text>
+                                        <Text   text="{= ${products>/Products/2/Quantity} > 2 ? 'Stock Normal' : 'Stock Bajo' }">
+                                        </Text>
+                                    </f:fields>
+
+                                    <f:fields>
+                                        <Text  text="{path: 'products>/Products/2/ProductName', type: 'sap.ui.model.type.String'}">
+                                        </Text>
+                                        <Text   text="{= ${products>/Products/2/Quantity} > 2 ? 'Stock Normal' : 'Stock Bajo' }">
+                                        </Text>
+                                    </f:fields>
+                                    <f:fields>
+                                        <Text  text="{path: 'products>/Products/2/ProductName', type: 'sap.ui.model.type.String'}">
+                                        </Text>
+                                        <Text   text="{= ${products>/Products/2/Quantity} &lt; 2 ? 'Stock Normal' : 'Stock normal' }">
+                                        </Text>
+                                    </f:fields>
+                                   <!-- <f:fields>
+                                        <Text  text="{path: 'products>/Products/2/ProductName', type: 'sap.ui.model.type.String'}">
+                                        </Text>
+                                        <Text   text="{= ${products>/Products/2/Quantity} < 2 ? 'Stock Normal' : 'Stock normal' }">
+                                        </Text>
+                                    </f:fields>-->
+                                </f:FormElement>
+
+                                <f:FormElement label="Ver Modelo">
+                                    <f:fields>
+                                        <Button text="Ver Modelo" press="verModelo">
+                                        </Button>
+                                    </f:fields>
+                                </f:FormElement>
+                            </f:formElements>
+                        </f:FormContainer>
+                    </f:formContainers>
+                </f:Form>
+            </VBox>
+
+        </content>
+    </Page>
+
+</mvc:View>
