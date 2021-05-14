@@ -1,0 +1,11 @@
+<mvc:View  controllerName="sap.ui.demo.wt.controller.Vista2" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+           xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page title = "Pagina 2"
+          showNavButton="true"
+          navButtonPress="gotoPagina1">
+        <content>
+                <Button text="Pagina 1" press="gotoPagina1"></Button>
+        </content>
+    </Page>
+</mvc:View>
+

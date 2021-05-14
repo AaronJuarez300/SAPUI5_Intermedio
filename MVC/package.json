@@ -1,0 +1,9 @@
+{
+  "name": "ui5-typescript-jsdoc",
+  "version": "0.0.1",
+  "description": "How to improve Fiori/UI5 code quality with Typescript",
+  "private": true,
+  "devDependencies": {
+    "@openui5/ts-types": "^1.60.3"
+  }
+}
