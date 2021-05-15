@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Creando un objeto con un JSON</h2>
+
+<p id="demo"></p>
+
+<script>
+let text ='{"empleados":['+
+'{"nombre":"John","apellido":"Doe"},'+
+'{"nombre":"Anna","apellido":"Smith"},'+
+'{"nombre":"Peter","apellido":"Jones"}]}';
+
+obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML = 
+obj.empleados[1].nombre+" "+
+obj.empleados[1].apellido;
+</script>
