@@ -1,0 +1,60 @@
+<mvc:View  controllerName="sap.ui.demo.wt.controller.Vista1" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+           xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page>
+        <content>
+            <Table id="idProductsTable" mode="SingleSelectMaster" selectionChange="onSelectionChange" items="{customer>/}">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <content>
+                            <ToolbarSpacer/>
+                            <Title text="Customer"/>
+                            <ToolbarSpacer/>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Label text="Id" />
+                    </Column>
+                    <Column>
+                        <Label text="Nombre" />
+                    </Column>
+                    <Column>
+                        <Label text="Apellido" />
+                    </Column>
+                    <Column>
+                        <Label text="Email" />
+                    </Column>
+                    <Column>
+                        <Label text="Cumpleaños" />
+                    </Column>
+                    <Column>
+                        <Label text="Genero" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{customer>id}" />
+                            <Text text="{customer>name}" />
+                            <Text text="{customer>lastname}" />
+                            <Text text="{customer>email}" />
+                            <Text text="{customer>birthdate}" />
+                            <Text text="{customer>gender}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+            </Table>
+        </content>
+        <footer>
+            <OverflowToolbar>
+                <content>
+                    <ToolbarSpacer/>
+                    <Button text="Agregar Customer" icon="sap-icon://add"  type="Emphasized" press="gotoAgregar"></Button>
+                </content>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>
+
